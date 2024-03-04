@@ -4,6 +4,8 @@ const https = require('https');
 const BEGIN_KEY = '-----BEGIN RSA PUBLIC KEY-----\n';
 const END_KEY = '\n-----END RSA PUBLIC KEY-----\n';
 
+console.log('## Using Keycloak-public-key version modified by jujusb');
+
 module.exports = function KeycloakPublicKeyFetcher(url, realm) {
   const certsUrl = realm ? `${url}/realms/${realm}/protocol/openid-connect/certs` : url;
   return {
